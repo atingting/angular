@@ -1,0 +1,4 @@
+:host { margin: 10px; } 
+/*host距离宿主style  */
+input:focus { font-weight: bold;}
+ .mousedown { border: 20px solid green; }

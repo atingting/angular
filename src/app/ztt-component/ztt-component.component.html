@@ -1,0 +1,21 @@
+<p>
+  ztt-component works! {{name}}
+</p>
+<div [ngStyle]="{color: 'white', 'background-color': 'blue'}" [style.background-color]="'yellow'">
+     <input #myInput type="text"  [(ngModel)]="fromappComponetnt"  (keydown.enter)="onEnter($event, myInput.value)"><!-- #variableName 语法，我们获取的对象是对应 DOM 元素的引用。 -->
+      <input  type="text"  [ngClass]="{mousedown: isMousedown}"
+      (mousedown)="isMousedown = true"
+      (mouseup)="isMousedown = false"
+      (mouseleave)="isMousedown = false" [(ngModel)]="updateValue" >
+     <button (click)="onClick(myInput, $event)"  >点击</button>
+     {{mailService.message}}
+     <p>API_URL: {{apiUrl}}</p>
+     <ul>
+      <li *ngFor="let message of mailService.messages; let i = index;">
+        {{i}} - {{message}} {{even}} 
+        <!-- *ngIf、*ngSwitchCase -->
+      </li>
+    </ul>
+     {{fromappComponetnt}} 
+      <button (click)="update.emit({text: updateValue})">更新</button>
+</div>
